@@ -15,7 +15,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="30dp"
-        android:layout_marginLeft="45dp" />
+        android:layout_marginLeft="45dp"
+        android:textColor="#ff434340" />
 
     <TextView
         android:layout_width="280dp"
@@ -25,7 +26,8 @@
         android:id="@+id/task_description"
         android:layout_below="@+id/task_name"
         android:layout_alignLeft="@+id/task_name"
-        android:layout_alignStart="@+id/task_name" />
+        android:layout_alignStart="@+id/task_name"
+        android:textColor="#ff7c8184" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -57,6 +59,7 @@
         android:id="@+id/task_time"
         android:layout_alignTop="@+id/task_description"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="#ff7c8184" />
 
 </RelativeLayout>
