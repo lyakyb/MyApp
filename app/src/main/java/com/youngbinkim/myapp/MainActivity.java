@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.youngbinkim.myapp.Adapters.TabsPagerAdapter;
+import com.youngbinkim.myapp.Fragments.TasksListFragment;
 
 
 public class MainActivity extends FragmentActivity implements ActionBar.TabListener {
@@ -86,7 +87,14 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     @Override
     public void onTabSelected(ActionBar.Tab tab, android.app.FragmentTransaction ft) {
         // On Tab Selected, Show the Selected View
-        viewPager.setCurrentItem(tab.getPosition());
+
+        if (tab.getPosition() == 0) {
+            TasksListFragment simpleListFragment = new TasksListFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.pager, simpleListFragment).commit();
+        }else{
+            viewPager.setCurrentItem(tab.getPosition());
+        }
+
     }
 
     @Override

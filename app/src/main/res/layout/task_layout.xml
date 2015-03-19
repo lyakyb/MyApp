@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/task_layout">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="THIS IS TASK NAME"
+        android:id="@+id/task_name"
+        android:layout_weight="0.18"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:layout_marginLeft="45dp" />
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Task Description"
+        android:id="@+id/task_description"
+        android:layout_below="@+id/task_name"
+        android:layout_alignLeft="@+id/task_name"
+        android:layout_alignStart="@+id/task_name" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/task_icon"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/task_description"
+        android:layout_alignBottom="@+id/task_description"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/task" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/task_importance"
+        android:layout_toRightOf="@+id/task_name"
+        android:layout_alignBottom="@+id/task_name"
+        android:adjustViewBounds="true"
+        android:layout_alignRight="@+id/task_time"
+        android:layout_alignEnd="@+id/task_time"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="DateTime"
+        android:id="@+id/task_time"
+        android:layout_alignTop="@+id/task_description"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
